@@ -251,7 +251,7 @@
     "{N} Web View": {
         "prefix": "nswebview",
         "body": [
-            "<WebView [src]=\"someUrl | pathToLocalFile | htmlString\"></WebView>",
+            "<WebView src=\"someUrl | pathToLocalFile | htmlString\"></WebView>",
             "$1"
         ]
     },
@@ -260,7 +260,7 @@
     "{N} Image": {
         "prefix": "nsimg",
         "body": [
-            "<Image [src]=\"$1\"></Image>",
+            "<Image src=\"$1\"></Image>",
             "$2"
         ]
     },
@@ -274,7 +274,7 @@
     "{N} Button": {
         "prefix": "nsbtn",
         "body": [
-            "<Button text=\"$1\" (tap)=\"$2\"></Label>",
+            "<Button text=\"$1\" (tap)=\"$2\"></Button>",
             "$3"
         ]
     },
