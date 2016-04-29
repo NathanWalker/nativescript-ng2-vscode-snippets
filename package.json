@@ -1,0 +1,49 @@
+{
+    "name": "nativescript-ng2-snippets",
+    "displayName": "NativeScript + Angular 2 Snippets",
+    "description": "Snippets for NativeScript + Angular 2 Development.",
+    "version": "1.0.0",
+    "publisher": "wwwalkerrun",
+    "icon": "images/logo.png",
+    "galleryBanner": {
+        "color": "#0c121c",
+        "theme": "dark"
+    },
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/NathanWalker/nativescript-ng2-vscode-snippets/issues",
+        "email": "walkerrunpdx@gmail.com"
+    },
+    "homepage": "https://github.com/NathanWalker/nativescript-ng2-vscode-snippets/blob/master/README.md",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/NathanWalker/nativescript-ng2-vscode-snippets.git"
+    },
+    "categories": [
+        "Snippets"
+    ],
+    "keywords": [
+        "nativescript",
+        "telerik",
+        "ns",
+        "ng2",
+        "angular",
+        "snippets",
+        "xml",
+        "html",
+        "mobile"
+    ],
+     "contributes": {
+        "snippets": [
+            {
+                "language": "html",
+                "path": "./snippets/html.json"
+            },
+            {
+                "language": "typescript",
+                "path": "./snippets/typescript.json"
+            }
+        ]
+     },
+    "engines":  { "vscode": "0.10.x" }
+}
