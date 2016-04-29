@@ -25,13 +25,9 @@
     "keywords": [
         "nativescript",
         "telerik",
-        "ns",
         "ng2",
         "angular",
-        "snippets",
-        "xml",
-        "html",
-        "mobile"
+        "snippets"
     ],
      "contributes": {
         "snippets": [

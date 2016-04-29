@@ -4,6 +4,8 @@ This JSON file contains snippets for all NativeScript UI components and some fre
 
 All UI components are prefixed with ```ns```. Attributes do not have a prefix.
 
+![Preview](https://cdn.filestackcontent.com/IcTER9raRgCi8nCQeOZu?v=0)
+
 ###UI Components
 
 #### From within TypeScript `Component` Files:
