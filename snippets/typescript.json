@@ -31,7 +31,7 @@
             "  selector: '$1',",
             "  templateUrl: `$2`",
             "})",
-            "export class $2 {",
+            "export class $3 {",
             "",
             "  constructor() {",
             "",
