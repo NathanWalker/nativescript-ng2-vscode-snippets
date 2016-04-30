@@ -25,6 +25,22 @@
             "</ActionBar>"
         ]
     },
+    
+    "{N} Action Bar with Custom Title": {
+        "prefix": "nsactionbarcustomtitle",
+        "body": [
+            "<ActionBar>",
+            "  <StackLayout orientation=\"horizontal\"",
+            "    ios:horizontalAlignment=\"center\"",
+            "    android:horizontalAlignment=\"left\">",
+            "    <Label text=\"$1\"></Label>",
+            "  </StackLayout>",
+            "  <ActionItem (tap)=\"$2\" ios.position=\"right\">",
+            "    <Button class=\"\" text=\"Right\"></Button>",
+            "  </ActionItem>",
+            "</ActionBar>"
+        ]
+    },
 
     // Layouts
     "{N} Stack Layout": {
@@ -281,28 +297,28 @@
     "{N} Text Field": {
         "prefix": "nstextfield",
         "body": [
-            "<TextField hint=\"$1\" text=\"{{ $2 }}\"></TextField>",
+            "<TextField hint=\"$1\" text=\"$2\"></TextField>",
             "$3"
         ]
     },
     "{N} Password Field": {
         "prefix": "nspassword",
         "body": [
-            "<TextField hint=\"Enter your password.\" text=\"{{ $1 }}\" secure=\"true\"></TextField>",
+            "<TextField hint=\"Enter your password.\" text=\"$1\" secure=\"true\"></TextField>",
             "$2"
         ]
     },
     "{N} Editable TextView": {
         "prefix": "nstextview_editable",
         "body": [
-            "<TextView hint=\"$1\" text=\"{{ $2 }}\" editable=\"true\"></TextView>",
+            "<TextView hint=\"$1\" text=\"$2\" editable=\"true\"></TextView>",
             "$3"
         ]
     },
     "{N} Non-Editable TextView": {
         "prefix": "nstextview_non-editable",
         "body": [
-            "<TextView text=\"{{ $1 }}\" editable=\"false\"></TextView>",
+            "<TextView text=\"$1\" editable=\"false\"></TextView>",
             "$2"
         ]
     },
