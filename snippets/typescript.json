@@ -295,12 +295,12 @@
         "prefix": "nstabview",
         "body": [
             "<TabView #tabView>",
-            "  <TabViewItem title=\"Tab 1\">",
+            "  <StackLayout *tabItem=\"{title: 'Tab 1'}\">",
             "    <Label text=\"This is Label in Tab 1\"></Label>",
-            "  </TabViewItem>",
-            "  <TabViewItem title=\"Tab 2\">",
+            "  </StackLayout>",
+            "  <StackLayout *tabItem=\"{title: 'Tab 2'\">",
             "    <Label text=\"This is Label in Tab 2\"></Label>",
-            "  </TabViewItem>",
+            "  </StackLayout>",
             "</TabView>",
             "$1"
         ]
