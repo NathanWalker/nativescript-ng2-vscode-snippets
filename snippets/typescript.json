@@ -3,7 +3,7 @@
     "{N} Component with template": {
         "prefix": "nscomponent_template",
         "body": [
-            "import {Component} from 'angular2/core';",
+            "import {Component} from '@angular/core';",
             "",
             "@Component({",
             "  selector: '$1',",
@@ -25,7 +25,7 @@
     "{N} Component with templateUrl": {
         "prefix": "nscomponent_templateUrl",
         "body": [
-            "import {Component} from 'angular2/core';",
+            "import {Component} from '@angular/core';",
             "",
             "@Component({",
             "  selector: '$1',",
