@@ -44,40 +44,70 @@
     "{N} Action Bar": {
         "prefix": "nsactionbar",
         "body": [
-            "<ActionBar title=\"Title\" icon=\"\">",
+            "<ActionBar title=\"Title\" icon=\"\" class=\"action-bar\">",
+            "</ActionBar>"
+        ]
+    },
+
+    "{N} Action Bar with Action Items": {
+        "prefix": "nsactionbaritems",
+        "body": [
+            "<ActionBar title=\"Title\" icon=\"\" class=\"action-bar\">",
             "  <ActionItem (tap)=\"\">",
-            "    <Button class=\"\" text=\"Left\"></Button>",
+            "    <Button class=\"\" text=\"Left\" class=\"action-item\"></Button>",
             "  </ActionItem>",
             "  <ActionItem (tap)=\"\" ios.position=\"right\">",
-            "    <Button class=\"\" text=\"Right\"></Button>",
+            "    <Button class=\"\" text=\"Right\" class=\"action-item\"></Button>",
             "  </ActionItem>",
             "</ActionBar>"
+        ]
+    },
+
+    "{N} Action Item": {
+        "prefix": "nsactionitem",
+        "body": [
+            "<ActionItem (tap)=\"\">",
+            "  <Button class=\"\" text=\"Left\" class=\"action-item\"></Button>",
+            "</ActionItem>"
+        ]
+    },
+
+    "{N} Action Item on the Right": {
+        "prefix": "nsactionitemright",
+        "body": [
+            "<ActionItem (tap)=\"\" ios.position=\"right\">",
+            "  <Button class=\"\" text=\"Right\" class=\"action-item\"></Button>",
+            "</ActionItem>"
         ]
     },
     
     "{N} Action Bar with Back": {
         "prefix": "nsactionbarback",
         "body": [
-            "<ActionBar title=\"$1\" icon=\"\">",
+            "<ActionBar title=\"$1\" icon=\"\" class=\"action-bar\">",
             "  <NavigationButton text=\"Back\" android.systemIcon=\"ic_menu_back\"></NavigationButton>",
-            "  <ActionItem (tap)=\"$2\" ios.position=\"right\">",
-            "    <Button class=\"\" text=\"Right\"></Button>",
-            "  </ActionItem>",
             "</ActionBar>"
+        ]
+    },
+
+    "{N} Navigation Button": {
+        "prefix": "nsactionbarnavbtn",
+        "body": [
+            "<NavigationButton text=\"Back\" android.systemIcon=\"ic_menu_back\"></NavigationButton>"
         ]
     },
     
     "{N} Action Bar with Custom Title": {
         "prefix": "nsactionbarcustomtitle",
         "body": [
-            "<ActionBar>",
+            "<ActionBar class=\"action-bar\">",
             "  <StackLayout orientation=\"horizontal\"",
             "    ios:horizontalAlignment=\"center\"",
             "    android:horizontalAlignment=\"left\">",
-            "    <Label text=\"$1\"></Label>",
+            "    <Label text=\"$1\" class=\"action-title\"></Label>",
             "  </StackLayout>",
             "  <ActionItem (tap)=\"$2\" ios.position=\"right\">",
-            "    <Button class=\"\" text=\"Right\"></Button>",
+            "    <Button class=\"\" text=\"Right\" class=\"action-item\"></Button>",
             "  </ActionItem>",
             "</ActionBar>"
         ]
@@ -284,9 +314,12 @@
     "{N} List View": {
         "prefix": "nslistview",
         "body": [
-            "<ListView [items]=\"source\" (loaded)=\"onLoaded($event)\" (itemLoading)=\"onItemLoading($event)\" (itemTap)=\"onItemTap($event)\">",
+            "<ListView [items]=\"source\" (loaded)=\"onLoaded($event)\" (itemLoading)=\"onItemLoading($event)\" (itemTap)=\"onItemTap($event)\" class=\"list-group\">",
             "    <template let-item=\"item\" let-odd=\"odd\" let-even=\"even\">",
+            "      <StackLayout>",
+            "        <Label [text]=\"item.title\" class=\"list-group-item\"></Label>",
             "        $1",
+            "      </StackLayout>",
             "    </template>",
             "</ListView>"
         ]
@@ -366,28 +399,28 @@
     "{N} SearchBar": {
         "prefix": "nssearchbar",
         "body": [
-            "<SearchBar id=\"${1:searchBar}\" hint=\"${2:Search}\" text=\"$3\" (clear)=\"${4:onClear}\" (submit)=\"${5:onSubmit}\"></SearchBar>",
+            "<SearchBar id=\"${1:searchBar}\" hint=\"${2:Search}\" text=\"$3\" (clear)=\"${4:onClear}\" (submit)=\"${5:onSubmit}\" class=\"search-bar\"></SearchBar>",
             "$6"
         ]
     },
     "{N} Switch": {
         "prefix": "nsswitch",
         "body": [
-            "<Switch [checked]=\"$1\"></Switch>",
+            "<Switch [checked]=\"$1\" class=\"switch\"></Switch>",
             "$2"
         ]
     },
     "{N} Progress Bar": {
         "prefix": "nsprogress",
         "body": [
-            "<Progress [value]=\"$1\"></Progress>",
+            "<Progress [value]=\"$1\" class=\"progress\"></Progress>",
             "$2"
         ]
     },
     "{N} Slider": {
         "prefix": "nsslider",
         "body": [
-            "<Slider [minValue]=\"$1\" [maxValue]=\"$2\" [value]=\"$3\"></Slider>",
+            "<Slider [minValue]=\"$1\" [maxValue]=\"$2\" [value]=\"$3\" class=\"slider\"></Slider>",
             "$4"
         ]
     },
@@ -415,7 +448,7 @@
     "{N} Activity Indicator": {
         "prefix": "nsloading",
         "body": [
-            "<ActivityIndicator width=\"100\" height=\"100\" [busy]=\"$1\"></ActivityIndicator>",
+            "<ActivityIndicator width=\"100\" height=\"100\" [busy]=\"$1\" class=\"activity-indicator\"></ActivityIndicator>",
             "$2"
         ]
     },
@@ -443,6 +476,10 @@
     "{N} Text Attribute": {
         "prefix": "text",
         "body": "text=\"$1\"$2"
+    },
+    "{N} Text Binding Attribute": {
+        "prefix": "textbinding",
+        "body": "[text]=\"$1\"$2"
     },
     "{N} Icon Attribute": {
         "prefix": "icon",
