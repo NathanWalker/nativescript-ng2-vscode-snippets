@@ -18,6 +18,7 @@ The following can be used inside both TypeScript and HTML view files:
 #### Layouts
 - Absolute Layout - ```nsabsolute```
 - Dock Layout - ```nsdock```
+- Flexbox Layout - ```nsflexbox```
 - Grid Layout - ```nsgrid```
 - Stack Layout - ```nsstack```
 - Wrap Layout - ```nswrap```
