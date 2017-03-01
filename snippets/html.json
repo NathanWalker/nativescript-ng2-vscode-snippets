@@ -39,7 +39,7 @@
             "</ActionItem>"
         ]
     },
-    
+
     "{N} Action Bar with Back": {
         "prefix": "nsactionbarback",
         "body": [
@@ -55,7 +55,7 @@
             "<NavigationButton text=\"Back\" android.systemIcon=\"ic_menu_back\"></NavigationButton>"
         ]
     },
-    
+
     "{N} Action Bar with Custom Title": {
         "prefix": "nsactionbarcustomtitle",
         "body": [
@@ -73,6 +73,22 @@
     },
 
     // Layouts
+     "{N} Flexbox Layout": {
+        "prefix": "nsflexbox",
+        "body": [
+            "<FlexboxLayout>",
+            "    $1",
+            "/<FlexboxLayout>"
+        ]
+    },
+    "{N} Flexbox Layout Column": {
+        "prefix": "nsflexbox_column",
+        "body": [
+            "<FlexboxLayout flexDirection=\"column\">",
+            "    $1",
+            "/<FlexboxLayout>"
+        ]
+    },
     "{N} Stack Layout": {
         "prefix": "nsstack",
         "body": [
