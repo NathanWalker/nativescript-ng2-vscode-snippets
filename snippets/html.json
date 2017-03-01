@@ -78,7 +78,7 @@
         "body": [
             "<FlexboxLayout>",
             "    $1",
-            "/<FlexboxLayout>"
+            "</FlexboxLayout>"
         ]
     },
     "{N} Flexbox Layout Column": {
@@ -86,7 +86,7 @@
         "body": [
             "<FlexboxLayout flexDirection=\"column\">",
             "    $1",
-            "/<FlexboxLayout>"
+            "</FlexboxLayout>"
         ]
     },
     "{N} Stack Layout": {
