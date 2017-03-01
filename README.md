@@ -1,4 +1,4 @@
-## NativeScript + Angular 2 Snippets for Visual Studio Code ##
+## NativeScript + Angular Snippets for Visual Studio Code ##
 
 This JSON file contains snippets for all NativeScript UI components and some frequently used attributes specifically for use with [nativescript-angular](https://github.com/NativeScript/nativescript-angular).
 
