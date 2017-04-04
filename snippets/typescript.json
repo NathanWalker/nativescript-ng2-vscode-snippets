@@ -3,7 +3,7 @@
     "{N} Component with template": {
         "prefix": "nscomponent_template",
         "body": [
-            "import {Component} from '@angular/core';",
+            "import { Component } from '@angular/core';",
             "",
             "@Component({",
             "  selector: '$1',",
@@ -25,7 +25,7 @@
     "{N} Component with templateUrl": {
         "prefix": "nscomponent_templateUrl",
         "body": [
-            "import {Component} from '@angular/core';",
+            "import { Component } from '@angular/core';",
             "",
             "@Component({",
             "  selector: '$1',",
@@ -331,12 +331,12 @@
         "prefix": "nslistview",
         "body": [
             "<ListView [items]=\"source\" (loaded)=\"onLoaded($event)\" (itemLoading)=\"onItemLoading($event)\" (itemTap)=\"onItemTap($event)\" class=\"list-group\">",
-            "    <template let-item=\"item\" let-odd=\"odd\" let-even=\"even\">",
+            "    <ng-template let-item=\"item\" let-odd=\"odd\" let-even=\"even\">",
             "      <StackLayout>",
             "        <Label [text]=\"item.title\" class=\"list-group-item\"></Label>",
             "        $1",
             "      </StackLayout>",
-            "    </template>",
+            "    </ng-template>",
             "</ListView>"
         ]
     },
