@@ -2,7 +2,7 @@
     "name": "nativescript-ng2-snippets",
     "displayName": "NativeScript + Angular Snippets",
     "description": "Snippets for NativeScript + Angular Development.",
-    "version": "2.0.0",
+    "version": "2.0.1",
     "publisher": "wwwalkerrun",
     "icon": "images/logo.png",
     "galleryBanner": {
@@ -29,7 +29,7 @@
         "angular",
         "snippets"
     ],
-     "contributes": {
+    "contributes": {
         "snippets": [
             {
                 "language": "html",
@@ -40,6 +40,9 @@
                 "path": "./snippets/typescript.json"
             }
         ]
-     },
+    },
+    "extensionDependencies": [
+        "johnpapa.Angular2"
+    ],
     "engines":  { "vscode": "0.10.x" }
 }
