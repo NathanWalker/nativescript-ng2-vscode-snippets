@@ -72,11 +72,10 @@ The following can be used inside both TypeScript and HTML view files:
 ## How to use?
 
 1. Inside Visual Studio Code press
-   ```bash
-   CTRL + P
-   ```
+```bash
+CTRL + P
+```
 2. Type the following in the console window
-
 ```bash
 ext install nativescript-ng2-snippets
 ```
