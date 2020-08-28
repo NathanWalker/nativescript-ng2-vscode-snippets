@@ -21,7 +21,6 @@
             "}"
         ]
     },
-
     "{N} Component with templateUrl": {
         "prefix": "nscomponent_templateUrl",
         "body": [
@@ -39,7 +38,63 @@
             "}"
         ]
     },
-
+    "{N} Modal Component with template": {
+        "prefix": "nsmodal_template",
+        "body": [
+            "import { Component, OnInit } from '@angular/core';",
+            "import { ModalDialogParams } from '@nativescript/angular';",
+            "",
+            "@Component({",
+            "  template: `",
+            "    $2",
+            "  `",
+            "})",
+            "export class $1 implements OnInit {",
+            "",
+            "  constructor(",
+            "    private params: ModalDialogParams,",
+            "  ) {",
+            "",
+            "  }",
+            "",
+            "  ngOnInit() {",
+            "",
+            "  }",
+            "",
+            "  onClose(): void {",
+            "    this.params.closeCallback();",
+            "  }",
+            "}"
+        ]
+    },
+    "{N} Modal Component with templateUrl": {
+        "prefix": "nsmodal_templateUrl",
+        "body": [
+            "import { Component, OnInit } from '@angular/core';",
+            "import { ModalDialogParams } from '@nativescript/angular';",
+            "",
+            "@Component({",
+            "  templateUrl: `$2`",
+            "})",
+            "export class $1 implements OnInit {",
+            "",
+            "  constructor(",
+            "    private params: ModalDialogParams,",
+            "  ) {",
+            "",
+            "  }",
+            "",
+            "  ngOnInit() {",
+            "",
+            "  }",
+            "",
+            "  onClose(): void {",
+            "    this.params.closeCallback();",
+            "  }",
+            "}"
+        ]
+    },
+    
     // Action Bar
     "{N} Action Bar": {
         "prefix": "nsactionbar",
@@ -48,7 +103,6 @@
             "</ActionBar>"
         ]
     },
-
     "{N} Action Bar with Action Items": {
         "prefix": "nsactionbaritems",
         "body": [
@@ -62,7 +116,6 @@
             "</ActionBar>"
         ]
     },
-
     "{N} Action Item": {
         "prefix": "nsactionitem",
         "body": [
@@ -71,7 +124,6 @@
             "</ActionItem>"
         ]
     },
-
     "{N} Action Item on the Right": {
         "prefix": "nsactionitemright",
         "body": [
@@ -80,7 +132,6 @@
             "</ActionItem>"
         ]
     },
-
     "{N} Action Bar with Back": {
         "prefix": "nsactionbarback",
         "body": [
@@ -89,14 +140,12 @@
             "</ActionBar>"
         ]
     },
-
     "{N} Navigation Button": {
         "prefix": "nsactionbarnavbtn",
         "body": [
             "<NavigationButton text=\"Back\" android.systemIcon=\"ic_menu_back\"></NavigationButton>"
         ]
     },
-
     "{N} Action Bar with Custom Title": {
         "prefix": "nsactionbarcustomtitle",
         "body": [
@@ -114,7 +163,7 @@
     },
 
     // Layouts
-     "{N} Flexbox Layout": {
+    "{N} Flexbox Layout": {
         "prefix": "nsflexbox",
         "body": [
             "<FlexboxLayout>",
@@ -377,10 +426,32 @@
             "$2"
         ]
     },
+    "{N} Formatted String Label": {
+        "prefix": "nslabel_formatted",
+        "body": [
+            "<Label>",
+            "  <FormattedString>",
+            "    <Span text=\"$1\"></Span>",
+            "  </FormattedString>",
+            "</Label>",
+            "$2"
+        ]
+    },
     "{N} Button": {
         "prefix": "nsbtn",
         "body": [
             "<Button text=\"$1\" (tap)=\"$2\"></Button>",
+            "$3"
+        ]
+    },
+    "{N} Formatted String Button": {
+        "prefix": "nsbtn_formatted",
+        "body": [
+            "<Button (tap)=\"$1\">",
+            "  <FormattedString>",
+            "    <Span text=\"$2\"></Span>",
+            "  </FormattedString>",
+            "</Button>",
             "$3"
         ]
     },
@@ -505,7 +576,7 @@
         "prefix": "tap",
         "body": "(tap)=\"$1\"$2"
     },
-	"{N} Text Wrap Attribute": {
+    "{N} Text Wrap Attribute": {
         "prefix": "wrap",
         "body": "textWrap=\"true\"$2"
     },
@@ -552,5 +623,22 @@
     "{N} Height Attribute": {
         "prefix": "height",
         "body": "height=\"$1\"$2"
+    },
+
+    // Helpers
+    "{N} Show a component as a modal": {
+        "prefix": "nsmodal_showModal",
+        "body": [
+            "const options: ModalDialogOptions = {",
+            "  viewContainerRef: this._vcRef,",
+            "  context: {$1},",
+            "  fullscreen: ${2:true}",
+            "};",
+            "",
+            "this._modalService.showModal($3, options)",
+            "  .then(($4) => {",
+            "    $5",
+            "  });"
+        ]
     }
 }

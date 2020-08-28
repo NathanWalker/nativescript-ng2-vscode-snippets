@@ -336,10 +336,32 @@
             "$2"
         ]
     },
+    "{N} Formatted String Label": {
+        "prefix": "nslabel_formatted",
+        "body": [
+            "<Label>",
+            "  <FormattedString>",
+            "    <Span text=\"$1\"></Span>",
+            "  </FormattedString>",
+            "</Label>",
+            "$2"
+        ]
+    },
     "{N} Button": {
         "prefix": "nsbtn",
         "body": [
             "<Button text=\"$1\" (tap)=\"$2\"></Button>",
+            "$3"
+        ]
+    },
+    "{N} Formatted String Button": {
+        "prefix": "nsbtn_formatted",
+        "body": [
+            "<Button (tap)=\"$1\">",
+            "  <FormattedString>",
+            "    <Span text=\"$2\"></Span>",
+            "  </FormattedString>",
+            "</Button>",
             "$3"
         ]
     },
