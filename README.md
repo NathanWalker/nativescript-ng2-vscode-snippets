@@ -14,6 +14,8 @@ All UI components are prefixed with `ns`. Attributes do not have a prefix.
 
 - Component with inline template - `nscomponent_template`
 - Component with templateUrl - `nscomponent_templateUrl`
+- Modal Component with inline template - `nsmodal_template`
+- Modal Component with templateUrl - `nsmodal_templateUrl`
 
 The following can be used inside both TypeScript and HTML view files:
 
@@ -31,12 +33,14 @@ The following can be used inside both TypeScript and HTML view files:
 - Action Bar - `nsactionbar`
 - Action Bar with Back Button - `nsactionbarback`
 - Label - `nslabel`
+- Label with Formatted String - `nslabel_formatted`
 - Text Field - `nstextfield`
 - Secure Text Field (for passwords) - `nspassword`
 - Text View - `nstextview`
 - Image - `nsimg`
 - Border - `nsborder`
 - Button - `nsbtn`
+- Button with Formatted String - `nsbtn_formatted`
 - Search Bar - `nssearchbar`
 - Switch - `nsswitch`
 - Slider - `nsslider`
@@ -68,6 +72,10 @@ The following can be used inside both TypeScript and HTML view files:
 - col - `col`
 - width - `width`
 - height - `height`
+
+### Helpers
+
+- showModal - `nsmodal_showModal`
 
 ## How to use?
 
